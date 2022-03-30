@@ -1,11 +1,13 @@
 import './App.css';
+import Main from "./components/Main.jsx"
 
 function App() {
   return (
-    <div className="App">
-      <h1>247 SPYWARE</h1>
-      <p>We will be right back!</p>
-    </div>
+
+
+ <Main/>
+
+    
   );
 }
 
