@@ -1,0 +1,61 @@
+.App {
+  text-align: center;
+  position: fixed;
+  top: 40%;
+  left: 45%;
+}
+
+img {
+  
+  width: 20rem;
+}
+
+@media screen and (max-width: 1400px) {
+  .App {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 40%;
+  }
+}
+
+
+@media screen and (max-width: 991px) {
+  .App {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 30%;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .App {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 25%;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .App {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 10%;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .App {
+    text-align: center;
+    position: fixed;
+    top: 40%;
+    left: 5%;
+  }
+  img {
+
+    width: 10rem;
+  }
+}
