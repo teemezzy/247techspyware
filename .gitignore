@@ -2,7 +2,7 @@
 
 # dependencies
 /node_modules
-/.gitignore
+/.gitignore/
 /.pnp
 .pnp.*
 .yarn/*
