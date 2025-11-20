@@ -37,7 +37,7 @@ const BlogCard = ({ post, variant = 'horizontal' }: StoriesProps) => {
             </span>
           </div>
           <div className="p-5">
-            <h3 className="font-bold text-lg mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+            <h3 className="font-bold text-lg text-black mb-2 line-clamp-2 group-hover:text-primary transition-colors">
               {post.title}
             </h3>
             <p className="text-sm text-gray-600 mb-3 line-clamp-2">
@@ -69,7 +69,7 @@ const BlogCard = ({ post, variant = 'horizontal' }: StoriesProps) => {
           </span>
         </div>
         <div className="p-5">
-          <h3 className="font-bold text-lg mb-2 line-clamp-2 group-hover:text-primary transition-colors">
+          <h3 className="font-bold text-lg text-black mb-2 line-clamp-2 group-hover:text-primary transition-colors">
             {post.title}
           </h3>
           <p className="text-sm text-gray-600 mb-3 line-clamp-2">

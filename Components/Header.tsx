@@ -9,8 +9,8 @@ const Header = () => {
     
   return (
     <div>
-        <header className='bg-white sticky'>
-            <div className='flex items-center justify-center py-4 px-40'>
+        <header className='fixed top-0 left-0 w-full z-50 bg-white'>
+            <div className='flex items-center justify-center py-4 sm:px-10 lg:px-40'>
                 <div className='py-4'>
                     <Image
                         src="/247techspywarelandscape.png"
@@ -24,15 +24,15 @@ const Header = () => {
                     <Link
                         href="/"
                         className={`px-5 py-3
-                            ${pathname === "/" ? "bg-primary text-white" : "text-secondary"}
+                            ${pathname === "/" ? "bg-primary text-white hover:text-secondary" : "text-secondary hover:bg-secondary hover:text-primary"}
                         `}
                     >
                         Home
                     </Link>
                     <Link
                         href="/about"
-                        className={`px-4 py-2 
-                            ${pathname === "/about" ? "bg-primary text-white" : "text-secondary"}
+                        className={`px-5 py-3 
+                            ${pathname === "/about" ? "bg-primary text-white hover:text-secondary" : "text-secondary hover:bg-secondary hover:text-primary"}
                         `}
                     >
                         About

@@ -83,15 +83,16 @@ const HorizontalScroll = ({ children, seeMoreLink }: HorizontalScrollProps) => {
         {children}
         
         {/* See More Card */}
-        <Link 
-          href={seeMoreLink}
-          className="min-w-[300px] h-[400px] flex items-center justify-center bg-gradient-to-br from-primary to-primary/80 rounded-lg hover:shadow-xl transition-all duration-300 flex-shrink-0"
-        >
-          <div className="text-center text-white">
-            <h3 className="text-2xl font-bold mb-2">See More</h3>
-            <p className="text-white/90">Explore all articles →</p>
-          </div>
-        </Link>
+        <div className='flex items-center justify-center'>
+            <Link 
+              href={seeMoreLink}
+              className="min-w-[200px] h-[200px] flex items-center justify-center bg-gradient-to-br from-primary to-primary/80 rounded-full hover:shadow-xl transition-all duration-300 flex-shrink-0"
+            >
+              <div className="text-center text-white">
+                <h3 className=" flex text-2xl font-bold mb-2 items-center justify-center">See More</h3>
+              </div>
+            </Link>
+        </div>
       </div>
 
       {/* Right Arrow */}
