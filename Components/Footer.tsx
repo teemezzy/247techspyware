@@ -90,7 +90,7 @@ const Footer = () => {
       <div className="mx-auto px-40">
         <div className="flex items-center justify-center py-4 bg-[#2a2a2a]">
           <p className="text-center text-sm text-gray-400">
-            Copyright © 2025. All Rights Reserved
+            © 2023 - 2025. TORTH ENTERPRISE. All Right Reserved. 
           </p>
         </div>
       </div>
