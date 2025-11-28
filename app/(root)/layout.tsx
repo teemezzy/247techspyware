@@ -9,13 +9,11 @@ type HomeProps = {
 }
 
 export default function layout({children}: HomeProps) {
-  const recentPosts = getRecentPosts(5)
   return (
     <div>
         <Header/>
 
         <main className='pt-32'>
-          <HeroNewsSlider posts={recentPosts} />
           {children}
         </main>
 
