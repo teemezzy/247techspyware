@@ -23,7 +23,7 @@ const BlogCard = ({ post, variant = 'horizontal' }: StoriesProps) => {
 
   if (variant === 'horizontal') {
     return (
-      <Link href={`/blog/${post.id}`} className="min-w-[350px] flex-shrink-0 group">
+      <Link href={`/blog/${post.id}`} className="min-w-[350px] lg:shrink-0 group hover:text-primary hover:shadow-xl">
         <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-all duration-300">
           <div className="relative h-[220px]">
             <Image

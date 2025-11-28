@@ -44,7 +44,7 @@ const HeroNewsSlider = ({ posts }: HeroNewsSliderProps) => {
 
   return (
     <div 
-      className="relative w-full h-[650px] overflow-hidden"
+      className="relative w-full h-[450px] md:h-[650px] overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
@@ -62,7 +62,7 @@ const HeroNewsSlider = ({ posts }: HeroNewsSliderProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative h-full container mx-auto px-20 flex items-center">
+      <div className="relative h-full container mx-auto lg:px-4 flex items-center">
         <div className="max-w-3xl text-white">
           {/* Category Badge */}
           <span 

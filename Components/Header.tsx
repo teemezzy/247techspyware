@@ -12,12 +12,26 @@ const Header = () => {
         <header className='fixed top-0 left-0 w-full z-50 bg-white'>
             <div className='flex items-center justify-center py-4 sm:px-10 lg:px-40'>
                 <div className='py-4'>
-                    <Image
-                        src="/247techspywarelandscape.png"
-                        alt='headerlogo'
-                        width={250}
-                        height={250}
-                    />
+                    <Link
+                        href="/"
+                    >
+                        <Image
+                            src="/247techspywarelandscape.png"
+                            alt='headerlogo'
+                            width={250}
+                            height={250}
+                            className='hidden md:block'
+                        />
+
+                        <Image
+                            src="/247techspywareICON.png"
+                            alt='headerlogo'
+                            width={60}
+                            height={60}
+                            className='md:hidden sm:block'
+                        />
+
+                    </Link>
                 </div>
 
                 <div className='ml-auto space-x-2'>

@@ -23,7 +23,7 @@ export default function EditorsPickPage() {
         {/* Editor's Pick Section */}
         <section className="mb-16">
           <h2 className="text-black text-4xl font-bold mb-8">Editor's Pick</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {paginatedPosts.map(post => (
               <BlogCard key={post.id} post={post} variant="grid" />
             ))}

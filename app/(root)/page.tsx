@@ -4,6 +4,7 @@ import HorizontalScroll from '@/Components/HorizontalScroll'
 import BlogCard from '@/Components/BlogCard'
 import { getRecentPosts, getFeaturedPosts, getMissedPosts } from '@/Constants/Stories'
 import Link from 'next/link'
+import HeroNewsSlider from '@/Components/HeroNewsSlider'
 
 export default function Home() {
   const recentPosts = getRecentPosts(5)
@@ -12,7 +13,8 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-20 py-12">
+      <HeroNewsSlider posts={recentPosts} />
+      <div className="container mx-auto lg:px-4 py-12">
         
         {/* Recent News Section */}
         <section className="mb-16">
@@ -37,7 +39,7 @@ export default function Home() {
         {/* In Case You Missed It Section */}
         <section className="mb-16">
           <h2 className="text-black text-3xl font-bold mb-8">In Case You Missed It</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {missedPosts.map(post => (
               <BlogCard key={post.id} post={post} variant="grid" />
             ))}
