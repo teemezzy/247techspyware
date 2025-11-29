@@ -10,7 +10,7 @@ const SideBar: React.FC<SidebarProps> = ({ activeView, setActiveView }) => {
   const items = ["dashboard", "posts", "categories", "comments", "users", "settings"];
 
   return (
-    <aside className="h-screen min-w-1/4 bg-secondary text-white flex flex-col py-30 px-20 border-r-2">
+    <aside className="h-screen min-w-1/4 bg-secondary text-white flex flex-col py-30 px-20">
       <div className="text-2xl font-bold mb-10"><AdminProfile/></div>
 
       <nav className="flex flex-col gap-10 pt-20 flex-1">

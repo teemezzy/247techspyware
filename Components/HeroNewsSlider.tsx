@@ -62,7 +62,7 @@ const HeroNewsSlider = ({ posts }: HeroNewsSliderProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative h-full container mx-auto lg:px-4 flex items-center">
+      <div className="relative h-full mx-auto px-10 md:px-20 flex items-center">
         <div className="max-w-3xl text-white">
           {/* Category Badge */}
           <span 

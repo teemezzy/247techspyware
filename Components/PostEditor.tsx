@@ -308,15 +308,15 @@ const PostEditor: React.FC<PostEditorProps> = ({ post, onSave, onCancel }) => {
           {/* Excerpt */}
           <div>
             <label className="block text-sm font-medium text-gray-700 mb-2">
-              Excerpt *
+              Meta Description
             </label>
             <textarea
-              name="excerpt"
+              name="meta description"
               value={formData.excerpt}
               onChange={handleInputChange}
               placeholder="Write a brief summary of the post..."
               rows={3}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
               required
             />
             <p className="text-sm text-gray-500 mt-1">
@@ -382,7 +382,7 @@ const PostEditor: React.FC<PostEditorProps> = ({ post, onSave, onCancel }) => {
               onChange={handleInputChange}
               placeholder="Write your post content here... You can use HTML tags for formatting."
               rows={16}
-              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none font-mono text-sm"
+              className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent resize-none font-mono text-sm"
               required
             />
             <p className="text-sm text-gray-500 mt-1">

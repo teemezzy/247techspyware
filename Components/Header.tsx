@@ -10,7 +10,7 @@ const Header = () => {
   return (
     <div>
         <header className='fixed top-0 left-0 w-full z-50 bg-white'>
-            <div className='flex items-center justify-center py-4 sm:px-10 lg:px-40'>
+            <div className='flex items-center justify-center py-4 px-10 md:px-20'>
                 <div className='py-4'>
                     <Link
                         href="/"
@@ -24,10 +24,10 @@ const Header = () => {
                         />
 
                         <Image
-                            src="/247techspywareICON.png"
+                            src="/247techspywarelandscape.png"
                             alt='headerlogo'
-                            width={60}
-                            height={60}
+                            width={200}
+                            height={200}
                             className='md:hidden sm:block'
                         />
 

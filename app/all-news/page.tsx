@@ -19,7 +19,7 @@ export default function AllNewsPage() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <div className="container mx-auto px-8 py-12">
+      <div className="mx-auto px-10 md:px-20 py-12">
         
         {/* Back Button */}
         <BackButton />

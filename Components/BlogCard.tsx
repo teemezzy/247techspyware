@@ -16,7 +16,7 @@ const BlogCard = ({ post, variant = 'horizontal' }: StoriesProps) => {
     HARDWARE: 'bg-orange-500',
     MOBILE: 'bg-pink-500',
     AI: 'bg-green-500',
-    AUTOMOTIVE: 'bg-red-500',
+    AUTOMOTIVE: 'bg-red-500', 
     SPACE: 'bg-indigo-500',
     GAMING: 'bg-yellow-500'
   }

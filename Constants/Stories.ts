@@ -531,7 +531,7 @@ export const stories = [
   
 export type Stories = typeof stories[0];
   
-  // Helper functions
+// Helper functions 
 export const getRecentPosts = (count: number = 5) => {
     return [...stories]
       .sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime())
@@ -543,11 +543,11 @@ export const getFeaturedPosts = (count: number = 5) => {
 };
   
 export const getMissedPosts = () => {
-    const recentIds = getRecentPosts(5).map(p => p.id);
-    const featuredIds = getFeaturedPosts(5).map(p => p.id);
-    const excludeIds = new Set([...recentIds, ...featuredIds]);
-    
-    return stories.filter(post => !excludeIds.has(post.id));
+  const recentIds = getRecentPosts(2).map(p => p.id);
+  const featuredIds = getFeaturedPosts(2).map(p => p.id);
+  const excludeIds = new Set([...recentIds, ...featuredIds]);
+  
+  return stories.filter(post => !excludeIds.has(post.id));
 };
   
 export const getAllPostsSorted = () => {
