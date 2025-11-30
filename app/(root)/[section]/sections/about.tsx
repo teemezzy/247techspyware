@@ -1,3 +1,4 @@
+
 import React from 'react'
 
 const About = () => {
@@ -5,7 +6,7 @@ const About = () => {
     <div className="bg-secondary text-white px-10 md:px-20">
       
       {/* Header */}
-      <section className="w-full py-24">
+      <section className="w-full py-24 space-y-10">
         <div className="max-w-5xl mx-auto">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight mb-4">
             About Us
@@ -14,25 +15,19 @@ const About = () => {
             247TechSpyware, under TORTH ENTERPRISE LLC, is a media company built to keep 
             people informed about what matters in tech.
           </p>
+          <br/>
+          <p className="text-gray-400 text-lg leading-relaxed">
+            Our work covers everyday technology, the fast-moving world of AI, the shift in 
+            eCommerce tools, and the steady rise of smart automotive systems.
+          </p>
+          <br/>
+          <p className="text-gray-400 text-lg leading-relaxed">
+            We keep things straight and easy to follow. No noise. No clutter. Just clear stories, 
+            updates, and explanations that help readers stay aware of how technology shapes 
+            daily life.
+          </p>
         </div>
-      </section>
-
-      {/* Main Content */}
-      <section className="w-full py-16">
         <div className="max-w-5xl mx-auto space-y-14">
-          
-          {/* Intro */}
-          <div className="space-y-4">
-            <p className="text-gray-400 text-lg leading-relaxed">
-              Our work covers everyday technology, the fast-moving world of AI, the shift in 
-              eCommerce tools, and the steady rise of smart automotive systems.
-            </p>
-            <p className="text-gray-400 text-lg leading-relaxed">
-              We keep things straight and easy to follow. No noise. No clutter. Just clear stories, 
-              updates, and explanations that help readers stay aware of how technology shapes 
-              daily life.
-            </p>
-          </div>
 
           {/* What We Do */}
           <div>

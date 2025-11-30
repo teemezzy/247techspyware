@@ -59,7 +59,7 @@ export default function Home() {
         {/* In Case You Missed It Section */}
         <section className="mb-16">
           <h2 className="text-black text-3xl font-bold mb-8">In Case You Missed It</h2>
-          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
             {missedPosts.map(post => (
               <BlogCard key={post.id} post={post} variant="grid" />
             ))}

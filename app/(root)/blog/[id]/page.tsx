@@ -1,4 +1,4 @@
-// app/blog/[id]/page.tsx
+// app/[]sectio]/sections/blog/[id]/page.tsx
 import React from 'react'
 import Image from 'next/image'
 import { stories } from '@/Constants/Stories'
@@ -29,7 +29,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
   }
 
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50 ">
       {/* Hero Image Section with Overlay Banner */}
       <div className="relative w-full h-[500px] bg-gray-900 mb-12">
         <Image
@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ id: s
       </div>
 
       {/* Main Content - Centered */}
-      <div className="max-w-7xl mx-auto px-8 py-8">
+      <div className="max-w-7xl mx-auto px-4 py-8">
         
         {/* Back Button */}
         <BackButton />

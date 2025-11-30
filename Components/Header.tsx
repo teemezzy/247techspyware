@@ -26,8 +26,8 @@ const Header = () => {
                         <Image
                             src="/247techspywarelandscape.png"
                             alt='headerlogo'
-                            width={200}
-                            height={200}
+                            width={150}
+                            height={150}
                             className='md:hidden sm:block'
                         />
 
