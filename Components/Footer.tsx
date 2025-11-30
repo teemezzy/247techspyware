@@ -46,12 +46,6 @@ const Footer = () => {
             <h3 className="text-lg font-bold uppercase">Site Links</h3>
             <nav className="flex flex-col space-y-4">
               <Link
-                href="/help"
-                className="text-gray-300 hover:text-primary transition-colors"
-              >
-                Help & support
-              </Link>
-              <Link
                 href="/privacy"
                 className="text-gray-300 hover:text-primary transition-colors"
               >
