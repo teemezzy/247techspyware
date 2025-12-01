@@ -34,11 +34,11 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-gray-50">
       <HeroNewsSlider posts={recentPosts} />
-      <div className="mx-auto px-10 md:px-20 py-12">
+      <div className="mx-auto px-5 sm:px-10 md:px-20 py-12">
         
         {/* Recent News Section */}
         <section className="mb-16">
-          <h2 className="text-black text-3xl font-bold mb-6">Recent News</h2>
+          <h2 className="text-black text-xl md:text-3xl font-bold mb-6">Recent News</h2>
           <HorizontalScroll seeMoreLink="/latest-news">
             {recentPosts.map(post => (
               <BlogCard key={post.id} post={post} variant="horizontal" />
@@ -48,7 +48,7 @@ export default function Home() {
 
         {/* Editor's Pick Section */}
         <section className="mb-16">
-          <h2 className="text-black text-3xl font-bold mb-6">Editor's Pick</h2>
+          <h2 className="text-black text-xl md:text-3xl font-bold mb-6">Editor's Pick</h2>
           <HorizontalScroll seeMoreLink="/editors-pick">
             {featuredPosts.map(post => (
               <BlogCard key={post.id} post={post} variant="horizontal" />
@@ -58,8 +58,8 @@ export default function Home() {
 
         {/* In Case You Missed It Section */}
         <section className="mb-16">
-          <h2 className="text-black text-3xl font-bold mb-8">In Case You Missed It</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 mb-8">
+          <h2 className="text-black text-xl md:text-3xl font-bold mb-8">In Case You Missed It</h2>
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
             {missedPosts.map(post => (
               <BlogCard key={post.id} post={post} variant="grid" />
             ))}

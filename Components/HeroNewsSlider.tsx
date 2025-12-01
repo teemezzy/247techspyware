@@ -62,11 +62,11 @@ const HeroNewsSlider = ({ posts }: HeroNewsSliderProps) => {
       </div>
 
       {/* Content */}
-      <div className="relative h-full mx-auto px-10 md:px-20 flex items-center">
+      <div className="relative h-full mx-auto px-5 sm:px-10 md:px-20 flex items-center">
         <div className="max-w-3xl text-white">
           {/* Category Badge */}
           <span 
-            className={`${categoryColors[currentPost.category] || 'bg-gray-500'} inline-block text-white text-sm font-bold px-4 py-2 rounded-full uppercase mb-4`}
+            className={`${categoryColors[currentPost.category] || 'bg-gray-500'} inline-block text-white text-[10px] md:text-sm font-bold px-4 py-2 rounded-full uppercase mb-4`}
           >
             {currentPost.category}
           </span>

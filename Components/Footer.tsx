@@ -5,7 +5,7 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="bg-secondary text-white py-6">
-      <div className="mx-auto px-10 md:px-20 py-12">
+      <div className="mx-auto px-5 sm:px-10 md:px-20 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="flex flex-col space-y-4">
@@ -81,7 +81,7 @@ const Footer = () => {
       </div>
 
       {/* Copyright */}
-      <div className="mx-auto px-10 md:px-10">
+      <div className="mx-auto px-5 sm:px-10 md:px-10">
         <div className="flex items-center justify-center py-4 bg-[#2a2a2a]">
           <p className="text-center text-sm text-gray-400">
             © 2023 - 2025. TORTH ENTERPRISE. All Right Reserved. 

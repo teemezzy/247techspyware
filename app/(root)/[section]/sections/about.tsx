@@ -3,7 +3,7 @@ import React from 'react'
 
 const About = () => {
   return (
-    <div className="bg-secondary text-white px-10 md:px-20">
+    <div className="bg-secondary text-white border-b-2 border-primary px-5 sm:px-10 md:px-20">
       
       {/* Header */}
       <section className="w-full py-24 space-y-10">

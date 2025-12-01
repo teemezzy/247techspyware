@@ -13,7 +13,7 @@ export default function layout({children}: HomeProps) {
     <div>
         <Header/>
 
-        <main className='pt-26'>
+        <main className='pt-22 md:pt-26'>
           {children}
         </main>
 
