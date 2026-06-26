@@ -37,6 +37,20 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* Force all form input text to render in black so light placeholders
+   don't make typed values look greyed-out. */
+input,
+textarea,
+select {
+  color: #000000;
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+  color: #6b7280; /* gray-500 for disabled controls */
+}
+
 .prose {
   @apply text-gray-800;
 }

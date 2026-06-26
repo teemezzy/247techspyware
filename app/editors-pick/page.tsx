@@ -1,47 +1,90 @@
 // app/editors-pick/page.tsx
-"use client"
-import React, { useState } from 'react'
-import BlogCard from '@/Components/BlogCard'
-import { getFeaturedPosts } from '@/Constants/Stories'
-import BackButton from '@/Components/BackButton'
+"use client";
+
+import React, { useEffect, useState } from "react";
+import { Loader2 } from "lucide-react";
+import BlogCard from "@/Components/BlogCard";
+import BackButton from "@/Components/BackButton";
+import { api, ApiError } from "@/lib/api";
+import { type Stories, mapEditorPicksToStories } from "@/Constants/Stories";
 
 export default function EditorsPickPage() {
-  const allFeaturedPosts = getFeaturedPosts(100) // Get all featured posts
-  const [page, setPage] = useState(1)
-  const postsPerPage = 9
+  const [posts, setPosts] = useState<Stories[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+  const [page, setPage] = useState(1);
+  const postsPerPage = 9;
 
-  const paginatedPosts = allFeaturedPosts.slice(0, page * postsPerPage)
-  const hasMore = paginatedPosts.length < allFeaturedPosts.length
+  useEffect(() => {
+    let cancelled = false;
+    (async () => {
+      try {
+        const picks = await api.listEditorPicks();
+        if (!cancelled) setPosts(mapEditorPicksToStories(picks));
+      } catch (err) {
+        if (!cancelled) {
+          setError(
+            err instanceof ApiError
+              ? err.message
+              : "Could not load editor's picks"
+          );
+        }
+      } finally {
+        if (!cancelled) setLoading(false);
+      }
+    })();
+    return () => {
+      cancelled = true;
+    };
+  }, []);
+
+  const paginatedPosts = posts.slice(0, page * postsPerPage);
+  const hasMore = paginatedPosts.length < posts.length;
 
   return (
     <div className="min-h-screen bg-gray-50">
       <div className="container mx-auto px-8 py-12">
-        
-        {/* Back Button */}
         <BackButton />
 
-        {/* Editor's Pick Section */}
         <section className="mb-16">
-          <h2 className="text-black text-4xl font-bold mb-8">Editor's Pick</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
-            {paginatedPosts.map(post => (
-              <BlogCard key={post.id} post={post} variant="grid" />
-            ))}
-          </div>
-          
-          {hasMore && (
-            <div className="text-center">
-              <button
-                onClick={() => setPage(prev => prev + 1)}
-                className="bg-primary hover:text-secondary cursor-pointer text-white font-semibold px-8 py-3 rounded-lg transition-colors"
-              >
-                Load More
-              </button>
+          <h2 className="text-black text-4xl font-bold mb-8">
+            Editor&apos;s Pick
+          </h2>
+
+          {loading ? (
+            <div className="flex justify-center py-16">
+              <Loader2 className="w-8 h-8 animate-spin text-primary" />
             </div>
+          ) : error ? (
+            <div className="bg-red-50 border border-red-200 text-red-800 text-sm rounded-lg p-4">
+              {error}
+            </div>
+          ) : posts.length === 0 ? (
+            <div className="text-center text-gray-500 py-12">
+              No editor&apos;s picks have been chosen yet.
+            </div>
+          ) : (
+            <>
+              <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-8">
+                {paginatedPosts.map((post) => (
+                  <BlogCard key={post.id} post={post} variant="grid" />
+                ))}
+              </div>
+
+              {hasMore && (
+                <div className="text-center">
+                  <button
+                    onClick={() => setPage((prev) => prev + 1)}
+                    className="bg-primary hover:text-secondary cursor-pointer text-white font-semibold px-8 py-3 rounded-lg transition-colors"
+                  >
+                    Load More
+                  </button>
+                </div>
+              )}
+            </>
           )}
         </section>
-
       </div>
     </div>
-  )
+  );
 }

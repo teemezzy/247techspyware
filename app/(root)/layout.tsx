@@ -1,24 +1,19 @@
 import React, { ReactNode } from 'react'
 import Header from '@/Components/Header'
 import Footer from '@/Components/Footer'
-import { getRecentPosts } from '@/Constants/Stories'
-import HeroNewsSlider from '@/Components/HeroNewsSlider'
 
 type HomeProps = {
     children: ReactNode
 }
 
-export default function layout({children}: HomeProps) {
+export default function layout({ children }: HomeProps) {
   return (
     <div>
-        <Header/>
-
+        <Header />
         <main className='pt-22 md:pt-26'>
           {children}
         </main>
-
-        <Footer/>
+        <Footer />
     </div>
-    
   )
 }

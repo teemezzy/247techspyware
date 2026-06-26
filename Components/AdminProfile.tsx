@@ -1,33 +1,36 @@
-import Image from 'next/image';
-import React from 'react';
+"use client";
+
+import Image from "next/image";
+import React from "react";
+import { useAuth } from "@/lib/auth";
 
 const AdminProfile = () => {
-  const firstName = "Adegboyega";
-  const lastName = "Olutoromo";
-  const email = "admin@example.com";
+  const { user } = useAuth();
+  const displayName = user?.display_name ?? "Loading…";
+  const email = user?.email ?? "";
+  const role = user?.role ?? "";
 
   return (
-    <div className="flex flex-col items-start text-center gap-6 py-6">
-      {/* Avatar */}
+    <div className="flex flex-col items-start text-center gap-4 py-2">
       <div className="relative">
         <Image
           src="/avatar.jpg"
           alt="Profile Photo"
-          width={100}
-          height={100}
+          width={80}
+          height={80}
           className="rounded-xl object-cover"
         />
       </div>
 
-      {/* Name */}
-      <h2 className="text-2xl font-semibold text-white">
-        {firstName} {lastName}
-      </h2>
-
-      {/* Email */}
-      <p className="text-gray-400 text-sm">
-        {email}
-      </p>
+      <div className="text-left">
+        <h2 className="text-xl font-semibold text-white">{displayName}</h2>
+        {email && <p className="text-gray-400 text-xs">{email}</p>}
+        {role && (
+          <span className="inline-block mt-2 text-[10px] uppercase tracking-wider px-2 py-0.5 rounded-full bg-primary text-secondary font-bold">
+            {role}
+          </span>
+        )}
+      </div>
     </div>
   );
 };

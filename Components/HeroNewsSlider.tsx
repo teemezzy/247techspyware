@@ -83,7 +83,7 @@ const HeroNewsSlider = ({ posts }: HeroNewsSliderProps) => {
 
           {/* Read More Button */}
           <Link
-            href={`/blog/${currentPost.id}`}
+            href={`/blog/${currentPost.slug}`}
             className="inline-block bg-primary hover:text-secondary text-white font-bold px-8 py-3 rounded transition-colors"
           >
             Read More
